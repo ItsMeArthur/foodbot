@@ -1,0 +1,318 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "FoodDelivery",
+  "desc": "",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "PedirComida"
+    }
+  ],
+  "entities": [
+    {
+      "name": "bairro",
+      "roles": []
+    },
+    {
+      "name": "numero",
+      "roles": []
+    },
+    {
+      "name": "prato",
+      "roles": []
+    },
+    {
+      "name": "quantidade",
+      "roles": []
+    },
+    {
+      "name": "rua",
+      "roles": []
+    }
+  ],
+  "composites": [
+    {
+      "name": "dados_entrega",
+      "children": [
+        "bairro",
+        "rua",
+        "numero"
+      ],
+      "roles": []
+    }
+  ],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "quero pedir {quantidade} {prato} na {rua} número {numero} bairro {bairro}",
+      "intent": "PedirComida"
+    },
+    {
+      "pattern": "por favor envia {quantidade} {prato} no {rua} numero {numero} no setor {bairro}",
+      "intent": "PedirComida"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "envia por favor duas pizzas de calabresa na rua alameda teodoro de sá filho, número 251, bairro karaiba",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "prato",
+          "startPos": 21,
+          "endPos": 39
+        },
+        {
+          "entity": "rua",
+          "startPos": 44,
+          "endPos": 74
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 44,
+          "endPos": 102
+        },
+        {
+          "entity": "numero",
+          "startPos": 84,
+          "endPos": 86
+        },
+        {
+          "entity": "bairro",
+          "startPos": 96,
+          "endPos": 102
+        }
+      ]
+    },
+    {
+      "text": "me manda por favor um burrito de carne seca no bairro santa mônica, na rua 14 de julho, número 345",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 19,
+          "endPos": 20
+        },
+        {
+          "entity": "prato",
+          "startPos": 22,
+          "endPos": 42
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 44,
+          "endPos": 97
+        },
+        {
+          "entity": "bairro",
+          "startPos": 54,
+          "endPos": 65
+        },
+        {
+          "entity": "rua",
+          "startPos": 71,
+          "endPos": 86
+        },
+        {
+          "entity": "numero",
+          "startPos": 95,
+          "endPos": 97
+        }
+      ]
+    },
+    {
+      "text": "me manda um sanduíche de atum na rua santos dummont numero 345 bairro centro",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 9,
+          "endPos": 10
+        },
+        {
+          "entity": "prato",
+          "startPos": 12,
+          "endPos": 28
+        },
+        {
+          "entity": "rua",
+          "startPos": 33,
+          "endPos": 50
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 33,
+          "endPos": 75
+        },
+        {
+          "entity": "numero",
+          "startPos": 59,
+          "endPos": 61
+        },
+        {
+          "entity": "bairro",
+          "startPos": 70,
+          "endPos": 75
+        }
+      ]
+    },
+    {
+      "text": "por favor me entrega um sanduíche de atum na rua alameda teodoro de sá, númeor 250, bairro jardim karaiba",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "prato",
+          "startPos": 24,
+          "endPos": 40
+        },
+        {
+          "entity": "rua",
+          "startPos": 45,
+          "endPos": 70
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 45,
+          "endPos": 104
+        },
+        {
+          "entity": "numero",
+          "startPos": 79,
+          "endPos": 81
+        },
+        {
+          "entity": "bairro",
+          "startPos": 91,
+          "endPos": 104
+        }
+      ]
+    },
+    {
+      "text": "quero pedir três pizzas grandes de calabresa pra entregar na avenida joão naves numero 213 bairro noroeste",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 12,
+          "endPos": 15
+        },
+        {
+          "entity": "prato",
+          "startPos": 17,
+          "endPos": 43
+        },
+        {
+          "entity": "rua",
+          "startPos": 61,
+          "endPos": 78
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 61,
+          "endPos": 105
+        },
+        {
+          "entity": "numero",
+          "startPos": 87,
+          "endPos": 89
+        },
+        {
+          "entity": "bairro",
+          "startPos": 98,
+          "endPos": 105
+        }
+      ]
+    },
+    {
+      "text": "quero que me entreguem dois crepes de mussarela na rua antônio virgílio de sá, número 451, bairro santa mônica",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 23,
+          "endPos": 26
+        },
+        {
+          "entity": "prato",
+          "startPos": 28,
+          "endPos": 46
+        },
+        {
+          "entity": "rua",
+          "startPos": 51,
+          "endPos": 77
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 51,
+          "endPos": 109
+        },
+        {
+          "entity": "numero",
+          "startPos": 86,
+          "endPos": 88
+        },
+        {
+          "entity": "bairro",
+          "startPos": 98,
+          "endPos": 102
+        }
+      ]
+    },
+    {
+      "text": "quero uma pizza de calabresa na rua campos lindos, número 345, bairro tocantins",
+      "intent": "PedirComida",
+      "entities": [
+        {
+          "entity": "quantidade",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "prato",
+          "startPos": 10,
+          "endPos": 27
+        },
+        {
+          "entity": "rua",
+          "startPos": 32,
+          "endPos": 49
+        },
+        {
+          "entity": "dados_entrega",
+          "startPos": 32,
+          "endPos": 78
+        },
+        {
+          "entity": "numero",
+          "startPos": 58,
+          "endPos": 60
+        },
+        {
+          "entity": "bairro",
+          "startPos": 70,
+          "endPos": 78
+        }
+      ]
+    }
+  ]
+}
